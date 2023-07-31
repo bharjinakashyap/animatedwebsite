@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/background.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.navbar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+button{
+    color: #fbfcfd;
+    padding: 10px 25px;      /* signup ka border ,initially in rectangle*/
+    background: transparent;   /*bcz of this we are able to see the background image in signup*/
+    border: 1px solid #fff;   /*signup ka boundary colour and its width*/
+    border-radius: 20px;   /*makes the rectangle boundary eclipse in shape*/
+    outline: none;
+    cursor: pointer;
+}
+.content{
+    color: #fbfcfd;   /*adding color to the text*/
+    position: absolute;  /*takes the text to the exact edge(left1)*/
+    top: 50%;     /*shift from top 50%*/
+    left: 8%;
+    transform: translateY(-50%);   /*vertically centre*/
+    z-index: 2;     /*why?*/
+}
+h1{
+    font-size: 80px;   /*makes h1 bigger*/
+    margin: 10px 0 30px;  
+    /*distance from above sentence, left and bottom sentence*/
+    line-height: 80px;
+}
+.sidebar{    /*that side mei jo line hai*/
+    width : 50px;
+    height: 100vh;
+    background: linear-gradient(#00545d, #000729);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.menu{
+    display: block;
+    width: 25px;
+    margin: 40px auto 0;   /*distance from above,side and bottom*/
+    cursor: pointer;
+}
+.social-links img{
+    width: 25px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.useful-links img{
+    width: 25px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.social-links{     /*earlier the images were on the top after menu img
+    but now its in the centre of sidebar*/
+    width: 50px;  /*why?*/
+    text-align: center;   /*so that the images are in centre*/
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%) ;
+}
+.useful-links{     /*earlier the images were on the top after menu img
+    but now its in the bottom of sidebar*/
+    width: 50px;  /*why?*/
+    text-align: center;   /*so that the images are in centre*/
+    position: absolute;
+    bottom: 30px;
+}
+.bubbles img{
+    width: 50px;    /*makes the bubbles images small and they are just below are coventic logo for now*/
+}
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content : space-around;  /*creates space btwn the 7 bubbles*/
+    position:absolute;
+    bottom:0;   /*imgs are aligned in the bottom now*/
+}
+.bubbles img{
+    animation: bubble 7s linear infinite;  /*this an animation name,here name is bubble*/
+}
+@keyframes bubble {
+    0%{
+        transform: translateY(0);   /*the bubbles start moving from 0 of the y-axis*/
+        opacity: 0;   /*its kind of invisible when at 0%*/
+    }
+    50%{
+        opacity: 1;    /*its fully visible when comes to 50% of the screen*/
+    }
+    70%{
+        opacity:1;     /*its fully visible when it is in 70% from bottom*/
+    }
+    100%{
+        transform: translateY(-80vh);    /*the bubbles move till 80 of the y-axis*/
+        opacity: 0;    /*it becomes invisible when reaches the top,i.e 100% from bottom*/
+    }
+}
+/*current status till here is that
+all the bubbles move together from the 0 y-axis till 80 y-axis
+having different opacities in different area of the page */
+
+.bubbles img:nth-child(1){
+    animation-delay:2s;
+}
+
+.bubbles img:nth-child(2){
+    animation-delay:1s;
+}
+
+.bubbles img:nth-child(3){
+    animation-delay:3s;
+}
+
+.bubbles img:nth-child(4){
+    animation-delay:4.5s;
+}
+
+.bubbles img:nth-child(5){
+    animation-delay:3s;
+}
+
+.bubbles img:nth-child(6){
+    animation-delay:6s;
+}
+
+.bubbles img:nth-child(7){
+    animation-delay:7s;
+}
+
+ /*the time is changed but the bubbles are visible at the bottom before they start moving
+ therefore we will place the bubble images at -70px so that the bubble are kind of in underground*/
+
+.bubbles{
+    bottom: -70px;
+}
+/*/http://127.0.0.1:5500/Firstwebsite.html/
